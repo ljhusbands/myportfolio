@@ -20,7 +20,6 @@ a {
 
 div.a {
   text-align: justify;
-  text-indent: 10%;
 }
 
 audio { 
@@ -85,18 +84,19 @@ audio {
       <i class="fa fa-bars"></i>
     </a>
     <a href="#home" class="w3-bar-item w3-button">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button"></i> ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button"></i>DESIGN</a>
-    <a href="#music" class="w3-bar-item w3-button"></i>MUSIC</a>
-    <a href="#contact" class="w3-bar-item w3-button"></i> CONTACT</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small">ABOUT</a>
+    <a href="#music" class="w3-bar-item w3-button w3-hide-small">MUSIC</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small">DESIGN</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small">CONTACT</a>
     </a>
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
     <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">DESIGN</a>
     <a href="#music" class="w3-bar-item w3-button" onclick="toggleFunction()">MUSIC</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">DESIGN</a>
     <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
   </div>
 </div>
@@ -105,7 +105,12 @@ audio {
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle w3-center" style="white-space:nowrap;">
     <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">LEW HUSBANDS</span><br><br>
-    <span class="w3-center w3-padding-large w3-black w3-small w3-wide w3-animate-opacity">PRODUCER, MUSICIAN, GRAPHIC DESIGNER</span>
+    <span class="w3-center w3-padding-large w3-black w3-small w3-wide w3-animate-opacity w3-hide-small">PRODUCER, MUSICIAN, GRAPHIC DESIGNER</span>
+    <div>
+      <span class="w3-center w3-padding-large w3-black w3-small w3-wide w3-animate-opacity w3-hide-large w3-hide-medium">PRODUCER</span><br>
+      <span class="w3-center w3-padding-large w3-black w3-small w3-wide w3-animate-opacity w3-hide-large w3-hide-medium">MUSICIAN</span><br>
+      <span class="w3-center w3-padding-large w3-black w3-small w3-wide w3-animate-opacity w3-hide-large w3-hide-medium">GRAPHIC DESIGNER</span>
+    </div>
   </div>
 </div>
 
@@ -131,13 +136,15 @@ audio {
 
     <!-- Hide this text on small devices -->
     <div class="a w3-col m6 w3-padding-large">
-      <p>Lew Husbands is a non-binary producer, musician and artist living in Brighton (UK). Available to work in music production, graphic design as well as teaching...</p>
-        <p>Lew is a composer, prodcuer and songwriter... loves a broad range of music, from 50s bebop to contemporary industrial techno.</p>
-        <p>Musical influences include Nick Cave, Leonard Cohen, Talking Heads, Chelsea Wolfe, Korn, Deftones, Grimes, Björk, Editors, Placebo, Floating Points, Bicep, BABii, Perc, Dorian Electra.</p>
-        <p>Music production areas of interests include: psychedelic indie rock, 303 acid bass lines, close vocal harmony, glitchy field recording, destroyed boomy techno kicks, big band jazz arrangements, baroque counterpoint...</p>
-        <p>Music projects Lew is really interested in working on: <b>music production</b>, song writing and mixing, <b>podcast</b> themes and jingles, podcast editing, app sound design, <b>computer game</b> sound design and <b>soundtracks</b>.</p>
-        <p>Art and design projects Lew is really interested in working on: <b>craft beer</b> branding and can label design, .</p>        
-        <p>Interested in experimental approaches to music, queer theory, hauntology, bauhaus design, philosophy, etc.</p>
+      <p>Lew Husbands is a non-binary producer, composer, musician and artist living in Brighton (UK). Available to work in music production and graphic design.</p>
+
+      <p> Lew is keen to offer their audio based skills to projects involving <b>music production</b>, song writing and mixing, <b>podcast</b> themes and jingles, podcast editing, app sound design, computer game sound design and <b>soundtracks</b>.</p>   
+
+      <p>Some of Lew’s musical influences include: Nick Cave, Leonard Cohen, P J Harvey, Björk, Chelsea Wolfe, Korn, Deftones, Talking Heads, Placebo, Thundercat, Self Esteem, Fever Ray, Grimes, Dorian Electra, BABii, Ada Rock, Perc, Floating Points, Bicep.</p>
+
+      <p>Art and design projects that Lew is really interested in working on include <b>craft beer</b> branding and can label design, poster art, illustration and logo design.</p>
+
+      <p>Other interests: experimental approaches to music, queer theory, hauntology, bauhaus design, philosophy, poetry, surrealism, tabletop games, pirates and vampires.</p>
     </div>
   </div>
   <!-- <p class="w3-large w3-center w3-padding-16">I'm really good at:</p>
@@ -146,76 +153,17 @@ audio {
   <p class="w3-wide"><i class="fas fa-music"></i>Music Theory</p> -->
 </div>
 
-<!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">DESIGN PORTFOLIO</span>
-  </div>
-</div>
-
-<!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center">ART & DESIGN</h3>
-  <p class="w3-center">Here are some of my latest art and design projects.<br> Click on the images to make them bigger.</p><br>
-
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
-    <div class="w3-col m3">
-      <img src=".\assets\images\bau-home-01.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bauhaus inspired piece">
-    </div>
-
-    <div class="w3-col m3">
-      <img src=".\assets\images\lipsxlips.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Minimal illustration">
-    </div>
-
-    <div class="w3-col m3">
-      <img src=".\assets\images\OMQ-keg-01.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Graphic design for keg beer...">
-    </div>
-
-    <div class="w3-col m3">
-      <img src=".\assets\images\sunset-shapes-01.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Abstract Composition">
-    </div>
-  </div>
-
-  <div class="w3-row-padding w3-center w3-section">
-    <div class="w3-col m3">
-      <img src=".\assets\images\Card-Ab-01.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Abstract Shape & Typography">
-    </div>
-
-    <div class="w3-col m3">
-      <img src=".\assets\images\Card-Bear-01.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Card Illustration">
-    </div>
-
-    <div class="w3-col m3">
-      <img src=".\assets\images\Cloud-beer-01.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Illustration">
-    </div>
-
-    <div class="w3-col m3">
-      <img src=".\assets\images\king-ink-03.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Custom Ink Text Design">
-    </div>
-  </div>
-</div>
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
-
 <!-- Third Parallax Image with Portfolio Text -->
 <div class="bgimg-3 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">MUSIC</span>
+     <span class="w3-xxlarge w3-text-white w3-wide">MUSIC PORTFOLIO</span>
   </div>
 </div>
 
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" id="music">
-  <h3 class="w3-center">MUSIC</h3>
-  <h4 class="w3-center">Composition, production, performance...</h4>
+<!--   <h3 class="w3-center">MUSIC</h3> -->
+  <h3 class="w3-center">COMPOSITION, PRODUCTION, PERFORMANCE.</h3>
   <p class="w3-center">Here are some examples of projects I've worked on as writer, producer and/or performer.<br> Click on the audio players to hear samples of the work.</p><br>
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
@@ -326,6 +274,65 @@ audio {
   </div> -->
 </div>
 
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">DESIGN PORTFOLIO</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+  <h3 class="w3-center">ART & DESIGN</h3>
+  <p class="w3-center">Here are some of my latest art and design projects.<br> Click on the images to make them bigger.</p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src=".\assets\images\bau-home-01.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bauhaus inspired piece">
+    </div>
+
+    <div class="w3-col m3">
+      <img src=".\assets\images\lipsxlips.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Minimal illustration">
+    </div>
+
+    <div class="w3-col m3">
+      <img src=".\assets\images\OMQ-keg-01.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Graphic design for keg beer...">
+    </div>
+
+    <div class="w3-col m3">
+      <img src=".\assets\images\sunset-shapes-01.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Abstract Composition">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src=".\assets\images\Card-Ab-01.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Abstract Shape & Typography">
+    </div>
+
+    <div class="w3-col m3">
+      <img src=".\assets\images\Card-Bear-01.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Card Illustration">
+    </div>
+
+    <div class="w3-col m3">
+      <img src=".\assets\images\Cloud-beer-01.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Illustration">
+    </div>
+
+    <div class="w3-col m3">
+      <img src=".\assets\images\king-ink-03.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Custom Ink Text Design">
+    </div>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
 <!-- Fourth Parallax Image with Portfolio Text -->
 <div class="bgimg-4 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
@@ -371,6 +378,7 @@ audio {
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <p><em>All work &#169; Lew Husbands unless otherwise stated.</p>
+  <P>Website by Lew Husbands</P>
   <div class="w3-xlarge w3-section">
 <!--     <a href="https://facebook.com/"><i class="fa fa-facebook-official w3-hover-opacity"></i> -->
     <a href="https://www.instagram.com/lewisjohnhusbands/"><i class="fa fa-instagram w3-hover-opacity" alt="visit my art & design instagram"></i>
